@@ -3,7 +3,8 @@ name = "vinefeeder"
 version = "0.1.0"
 description = "GUI front-end for envied"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10,<3.14"
+
 dependencies = [
   "envied",         # resolved via [tool.uv.sources] at the workspace root
   "PyQt6",          # or  GUI toolkit(s)
