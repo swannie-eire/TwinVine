@@ -5,12 +5,12 @@ from http.cookiejar import CookieJar
 from langcodes import Language
 import click
 
-from unshackle.core.constants import AnyTrack
-from unshackle.core.credential import Credential
-from unshackle.core.manifests import DASH
-from unshackle.core.service import Service
-from unshackle.core.titles import Movie, Movies, Title_T, Titles_T
-from unshackle.core.tracks import Tracks
+from envied.core.constants import AnyTrack
+from envied.core.credential import Credential
+from envied.core.manifests import DASH
+from envied.core.service import Service
+from envied.core.titles import Movie, Movies, Title_T, Titles_T
+from envied.core.tracks import Tracks
 
 
 class PTHS(Service):

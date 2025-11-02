@@ -475,7 +475,7 @@ class dl:
 
         # Check if dovi_tool is available when hybrid mode is requested
         if any(r == Video.Range.HYBRID for r in range_):
-            from unshackle.core.binaries import DoviTool
+            from envied.core.binaries import DoviTool
 
             if not DoviTool:
                 self.log.error("Unable to run hybrid mode: dovi_tool not detected")

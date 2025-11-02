@@ -211,7 +211,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Safer geofence checks with error handling and clearer logs.
   - Always verify proxy exit region via live IP lookup; fallback to proxy parsing on failure.
 - Example config updated to default to Shaka
-  - `unshackle.yaml`/example now sets `decryption.default: shaka` (service overrides still supported).
+  - `envied.yaml`/example now sets `decryption.default: shaka` (service overrides still supported).
 
 ### Removed
 
@@ -356,18 +356,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **mp4decrypt Support**: Alternative DRM decryption method using mp4decrypt from Bento4
   - Added `mp4decrypt` binary detection and support in binaries module
-  - New `decryption` configuration option in unshackle.yaml for service-specific decryption methods
+  - New `decryption` configuration option in envied.yaml for service-specific decryption methods
   - Enhanced PlayReady and Widevine DRM classes with mp4decrypt decryption support
   - Service-specific decryption mapping allows choosing between `shaka` and `mp4decrypt` per service
   - Improved error handling and progress reporting for mp4decrypt operations
 - **Scene Naming Configuration**: New `scene_naming` option for controlling file naming conventions
   - Added scene naming logic to movie, episode, and song title classes
-  - Configurable through unshackle.yaml to enable/disable scene naming standards
+  - Configurable through envied.yaml to enable/disable scene naming standards
 - **Terminal Cleanup and Signal Handling**: Enhanced console management
   - Implemented proper terminal cleanup on application exit
   - Added signal handling for graceful shutdown in ComfyConsole
 - **Configuration Template**: New `unshackle-example.yaml` template file
-  - Replaced main `unshackle.yaml` with example template to prevent git conflicts
+  - Replaced main `envied.yaml` with example template to prevent git conflicts
   - Users can now modify their local config without affecting repository updates
 - **Enhanced Credential Management**: Improved CDM and vault configuration
   - Expanded credential management documentation in configuration
@@ -403,7 +403,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **Update Checker**: Automatic GitHub release version checking on startup
-  - Configurable update notifications via `update_checks` setting in unshackle.yaml
+  - Configurable update notifications via `update_checks` setting in envied.yaml
   - Non-blocking HTTP requests with 5-second timeout for performance
   - Smart semantic version comparison supporting all version formats (x.y.z, x.y, x)
   - Graceful error handling for network issues and API failures
@@ -419,7 +419,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Enhanced configuration system with new `update_checks` boolean option (defaults to true)
-- Updated sample unshackle.yaml with update checker configuration documentation
+- Updated sample envied.yaml with update checker configuration documentation
 - Improved console styling consistency using `bright_black` for dimmed text
 - **Environment Dependency Check**: Complete overhaul with detailed categorization and status summary
   - Organized dependencies by category (Core, HDR, Download, Subtitle, Player, Network)
