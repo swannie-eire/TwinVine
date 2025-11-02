@@ -155,14 +155,14 @@ class AUBC(Service):
         return tracks
 
     def get_chapters(self, title: Union[Movie, Episode]) -> Chapters:
-        if not title.data.get("cuePoints"):
-            return Chapters()
+        # if not title.data.get("cuePoints"):
+        #     return Chapters()
         
-        credits = next((x.get("start") for x in title.data["cuePoints"] if x["type"] == "end-credits"), None)
-        if credits:
-            return Chapters([Chapter(name="Credits", timestamp=credits * 1000)])
+        # credits = next((x.get("start") for x in title.data["cuePoints"] if x["type"] == "end-credits"), None)
+        # if credits:
+        #     return Chapters([Chapter(name="Credits", timestamp=credits * 1000)])
         
-        return Chapters()
+        return []
 
     def get_widevine_service_certificate(self, **_: Any) -> str:
         return None
