@@ -9,7 +9,7 @@ muxing:
   set_title: false
 
 # shakapackager or mp4decrypt
-decryption: mp4decrypt
+decryption: shakapackager
 
 scene_naming: false
 series_year: false
