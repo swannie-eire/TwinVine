@@ -550,6 +550,7 @@ dependencies = [
     { name = "httpx" },
     { name = "isodate" },
     { name = "jsonpickle" },
+    { name = "jwt" },
     { name = "langcodes" },
     { name = "lxml" },
     { name = "mypy" },
@@ -603,16 +604,18 @@ requires-dist = [
     { name = "curl-cffi", specifier = ">=0.7.0b4,<0.8" },
     { name = "httpx", specifier = ">=0.28.1,<0.29" },
     { name = "isodate", specifier = ">=0.7.2" },
-    { name = "jsonpickle", specifier = ">=3.0.4,<4" },
+    { name = "jsonpickle", specifier = ">=3.0.4,<4.5" },
+    { name = "jwt", specifier = ">=1.4.0" },
     { name = "langcodes", specifier = ">=3.4.0,<4" },
+    { name = "langcodes", specifier = ">=3.5.0" },
     { name = "lxml", specifier = ">=6.0.2" },
     { name = "mypy", specifier = ">=1.18.2,<2" },
     { name = "pproxy", specifier = ">=2.7.9,<3" },
-    { name = "protobuf", specifier = ">=4.25.3,<5" },
+    { name = "protobuf", specifier = ">=4.25.3,<7" },
     { name = "pycaption", specifier = ">=2.2.6,<3" },
     { name = "pycryptodomex", specifier = ">=3.20.0,<4" },
     { name = "pyjwt", specifier = ">=2.8.0,<3" },
-    { name = "pymediainfo", specifier = ">=6.1.0,<7" },
+    { name = "pymediainfo", specifier = ">=6.1.0,<7.5" },
     { name = "pymp4", specifier = ">=1.4.0,<2" },
     { name = "pymysql", specifier = ">=1.1.0,<2" },
     { name = "pyplayready", specifier = ">=0.6.3,<0.7" },
@@ -620,7 +623,7 @@ requires-dist = [
     { name = "pywidevine", extras = ["serve"], specifier = ">=1.8.0,<2" },
     { name = "pyyaml", specifier = ">=6.0.1,<7" },
     { name = "requests", extras = ["socks"], specifier = ">=2.31.0,<3" },
-    { name = "rich", specifier = ">=13.7.1,<14" },
+    { name = "rich", specifier = ">=13.7.1,<15" },
     { name = "rlaphoenix-m3u8", specifier = ">=3.4.0,<4" },
     { name = "ruamel-yaml", specifier = ">=0.18.6,<0.19" },
     { name = "scrapy", specifier = ">=2.13.3" },
@@ -880,6 +883,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/eb/d9/05365407d3312653498001adcebe64a14024f7189691b728610209991c46/jsonpickle-3.4.2.tar.gz", hash = "sha256:2efa2778859b6397d5804b0a98d52cd2a7d9a70fcb873bc5a3ca5acca8f499ba", size = 314339, upload-time = "2024-11-06T07:48:25.479Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c0/a3/e610ae0feba3e7374da08ab6cc9bb76c8bfa84b4e502aa357bda0ef6dcae/jsonpickle-3.4.2-py3-none-any.whl", hash = "sha256:fd6c273278a02b3b66e3405db3dd2f4dbc8f4a4a3123bfcab3045177c6feb9c3", size = 46256, upload-time = "2024-11-06T07:48:22.923Z" },
+]
+
+[[package]]
+name = "jwt"
+version = "1.4.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cryptography" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7f/20/21254c9e601e6c29445d1e8854c2a81bdb554e07a82fb1f9846137a6965c/jwt-1.4.0.tar.gz", hash = "sha256:f6f789128ac247142c79ee10f3dba6e366ec4e77c9920d18c1592e28aa0a7952", size = 24911, upload-time = "2025-06-23T13:28:38.289Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b9/80/34e3fae850adb0b7b8b9b1cf02b2d975fcb68e0e8eb7d56d6b4fc23f7433/jwt-1.4.0-py3-none-any.whl", hash = "sha256:7560a7f1de4f90de94ac645ee0303ac60c95b9e08e058fb69f6c330f71d71b11", size = 18248, upload-time = "2025-06-23T13:28:37.012Z" },
 ]
 
 [[package]]
